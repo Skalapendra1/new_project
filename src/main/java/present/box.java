@@ -40,4 +40,3 @@ public abstract class box {
         return "Название= '" + name + "', цена= " + price + ", вес= " + weight;
     }
 }
-

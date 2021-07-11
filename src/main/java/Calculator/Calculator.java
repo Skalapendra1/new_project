@@ -1,11 +1,10 @@
 package Calculator;
 
 import Calculator.operations.*;
-import com.sun.xml.internal.ws.wsdl.writer.document.http.Operation;
 
 import java.util.Scanner;
 
-public class calculator {
+public class Calculator {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -21,18 +20,22 @@ public class calculator {
         Operations multiplication = new Multiplication();
         Operations division = new Division();
 
-
         switch (zn) {
-            case "/":division.showOperations(sl1,sl2,zn);
+            case "/":
+                division.showOperations(sl1, sl2, zn);
                 break;
-            case "*":multiplication.showOperations(sl1,sl2,zn);
+            case "*":
+                multiplication.showOperations(sl1, sl2, zn);
                 break;
-            case "-":subtraction.showOperations(sl1,sl2,zn);
+            case "-":
+                subtraction.showOperations(sl1, sl2, zn);
                 break;
-            case "+":addition.showOperations(sl1,sl2,zn);
+            case "+":
+                addition.showOperations(sl1, sl2, zn);
                 break;
             default:
                 System.out.println("Не балуйся!\nВводи нормально!");
         }
+
     }
 }
