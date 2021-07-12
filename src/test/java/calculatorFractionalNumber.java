@@ -12,7 +12,7 @@ public class calculatorFractionalNumber {
     public void resultSubtraction() {
         Operations subtraction = new Subtraction();
         double res = subtraction.showOperations(-8.28, 3.75, "-");
-        assertEquals("Что-то пошло не так", 4.53, res, 0.0);
+        assertEquals("Что-то пошло не так", -12.03, res, 0.0);
     }
 
     @Test
@@ -26,7 +26,7 @@ public class calculatorFractionalNumber {
     public void resultMultiplication() {
         Operations multiplication = new Multiplication();
         double res = multiplication.showOperations(8.28, 3.75, "*");
-        assertEquals("Что-то пошло не так", 31.05, res, 0.0);
+        assertEquals("Что-то пошло не так", 31.05, res, 0.0000001);
     }
 
     @Test

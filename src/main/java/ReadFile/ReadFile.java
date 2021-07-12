@@ -9,14 +9,23 @@ public class ReadFile {
     public static void main(String[] args) throws IOException {
         String fileName = "C:\\Users\\user\\Desktop\\wtf.txt";
         BufferedReader br = new BufferedReader(new FileReader(fileName));
-        String v = br.readLine();
-        String str = v.toLowerCase();
+        StringBuilder stringBuilder = new StringBuilder();
+        String v =null;
+        String ls = System.getProperty("line.separator");
+        while( ( v = br.readLine() ) != null ) {
+            stringBuilder.append( v );
+            stringBuilder.append( ls );
+        }
+        stringBuilder.deleteCharAt(stringBuilder.length()-1);
+        String str = stringBuilder.toString();
+        str = str.toLowerCase();
         ArrayList<String> arrayList = new ArrayList<>();
         HashMap<String, Integer> map = new HashMap<>();
 
         String[] mas = str.split(" ");
         for (int i = 0; i < mas.length; i++) {
-            arrayList.add(mas[i]);
+            if (!mas[i].trim().isEmpty())
+                arrayList.add(mas[i].trim());
         }
         System.out.println(arrayList);
         Collections.sort(arrayList, (a, b) -> a.compareTo(b));
