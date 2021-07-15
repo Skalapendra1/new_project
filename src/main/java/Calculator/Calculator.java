@@ -7,10 +7,13 @@ import java.util.Scanner;
 public class Calculator {
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+
         System.out.println("ВВеди два числа:");
-        double sl1 = scanner.nextDouble();
-        double sl2 = scanner.nextDouble();
+
+            Scanner scanner=new Scanner(System.in);
+            double sl1 = scanner.nextDouble();
+            double sl2 = scanner.nextDouble();
+
         System.out.println("ВВеди знак:");
         Scanner scanner3 = new Scanner(System.in);
         String zn = scanner3.nextLine();

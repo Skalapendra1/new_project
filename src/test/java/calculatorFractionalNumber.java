@@ -35,6 +35,12 @@ public class calculatorFractionalNumber {
         double res = division.showOperations(-8.635, 3.14, "/");
         assertEquals("Что-то пошло не так", -2.75, res, 0.0);
     }
+    @Test
+    public void NotNumber() {
+        Operations division = new Division();
+        double res = division.showOperations(-8.635, 3.14, "/");
+        assertEquals("Что-то пошло не так", -2.75, res, 0.0);
+    }
 
 }
 

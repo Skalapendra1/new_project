@@ -13,5 +13,6 @@ public class Division implements Operations {
             System.out.println("Деление - " + res.toString());
             return res;
         }
+
     }
 }
